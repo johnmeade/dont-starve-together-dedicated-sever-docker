@@ -1,0 +1,15 @@
+FROM dstbase
+
+ENV SHARD_NAME Caves
+ADD server.ini $CLUSTER/$SHARD_NAME/server.ini
+ADD modoverrides.lua $CLUSTER/$SHARD_NAME/modoverrides.lua
+ADD worldgenoverride.lua $CLUSTER/$SHARD_NAME/worldgenoverride.lua
+
+EXPOSE 8769 11001 27018
+
+CMD \
+  cd $INSTALL_DIR/bin && \
+  ./dontstarve_dedicated_server_nullrenderer \
+    -persistent_storage_root $KLEI \
+    -shard $SHARD_NAME \
+    -cluster $CLUSTER_NAME

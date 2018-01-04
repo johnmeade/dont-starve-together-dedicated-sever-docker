@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+
+  dstbase:
+    build: ./
+    image: dstbase
+
+  dstmaster:
+    build: ./shards/master
+    restart: always
+    depends_on:
+      - dstbase
+    volumes:
+      - dst:/root/.klei/DoNotStarveTogether
+    ports:
+      - "8768:8768"
+      - "10889:10889"
+      - "11000:11000"
+      - "27018:27018"
+
+  dstcaves:
+    build: ./shards/caves
+    restart: always
+    depends_on:
+      - dstbase
+    volumes:
+      - dst:/root/.klei/DoNotStarveTogether
+    ports:
+      - "8769:8769"
+      - "11001:11001"
+      - "27019:27019"
+
+# global volume definition for persistent storage
+volumes:
+  dst:
