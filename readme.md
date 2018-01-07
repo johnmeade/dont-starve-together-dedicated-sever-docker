@@ -10,37 +10,37 @@ token and run the build command to get it running (detailed instructions below).
 
 Some information here may become out of date. If something is not
 working, check the Klei formums
-[here](forums.kleientertainment.com)
+[here](https://forums.kleientertainment.com/)
 first, and report any problems as a git issue here.
 
 # Setup
 
 1. Install Docker (`17.06.0+` or newer) and Docker Compose on your system.
-  Official instructions for docker
-  [here](https://docs.docker.com/engine/installation/), and compose
-  [here](https://docs.docker.com/compose/install/).
+    Official instructions for docker
+    [here](https://docs.docker.com/engine/installation/), and compose
+    [here](https://docs.docker.com/compose/install/).
 
-  Eg, quickstart for Ubuntu:
+    Eg, quickstart for Ubuntu:
 
-  ```bash
-  sudo apt-get update
-  # install docker
-  sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common
-  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-  sudo add-apt-repository \
-    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-    $(lsb_release -cs) \
-    stable"
-  sudo apt-get update
-  sudo apt-get install docker-ce
-  # install docker-compose (NOTE: hardcoded version here, you should get the latest)
-  sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-  sudo chmod +x /usr/local/bin/docker-compose
-  ```
+    ```bash
+    sudo apt-get update
+    # install docker
+    sudo apt-get install \
+      apt-transport-https \
+      ca-certificates \
+      curl \
+      software-properties-common
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo add-apt-repository \
+      "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+      $(lsb_release -cs) \
+      stable"
+    sudo apt-get update
+    sudo apt-get install docker-ce
+    # install docker-compose (NOTE: hardcoded version here, you should get the latest)
+    sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    ```
 
 1. Clone / download this repository
 
@@ -55,16 +55,16 @@ first, and report any problems as a git issue here.
 
 1. Modify the following files to your liking:
 
-  * `cluster/cluster.ini` -- contains general settings for the server like
-    it's name, the maximum number of players allowed, etc.
-    See the `readme.cluster.md` file for a description of
-    the options.
-  * `mods/dedicated_server_mods_setup.lua` -- define the mods you wish to use.
-  * `mods/modsettings.lua` -- extra settings for mods.
-  * `shards/master/server.ini` and `shards/caves/server.ini` -- define server settings. See the `readme.server.md` file
-    for a description of the options.
-  * `shards/master/modoverrides.lua` and `shards/caves/modoverrides.lua` -- enable and configure mods.
-  * `shards/master/worldgenoverride.lua` and `shards/caves/worldgenoverride.lua` -- world generation settings.
+    * `cluster/cluster.ini` -- contains general settings for the server like
+      it's name, the maximum number of players allowed, etc.
+      See the `readme.cluster.md` file for a description of
+      the options.
+    * `mods/dedicated_server_mods_setup.lua` -- define the mods you wish to use.
+    * `mods/modsettings.lua` -- extra settings for mods.
+    * `shards/master/server.ini` and `shards/caves/server.ini` -- define server settings. See the `readme.server.md` file
+      for a description of the options.
+    * `shards/master/modoverrides.lua` and `shards/caves/modoverrides.lua` -- enable and configure mods.
+    * `shards/master/worldgenoverride.lua` and `shards/caves/worldgenoverride.lua` -- world generation settings.
 
 # Usage
 
@@ -120,7 +120,7 @@ can ssh into the running containers like this:
 docker-compose up
 # this will list all running containers
 docker ps
-# find the id of the "master" or "caves" container, for example "797eebb71d77"
+# find the id of the "master" or "caves" container, for example "797eebb72d77"
 docker exec -it 797eebb72d77 /bin/bash
 # now you have a bash terminal inside the container, and you
 # can run whatever commands you want, like `steamcmd`.
