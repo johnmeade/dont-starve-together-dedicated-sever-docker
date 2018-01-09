@@ -35,4 +35,10 @@ ADD mods/modsettings.lua $INSTALL_DIR/mods/modsettings.lua
 EXPOSE 8768 8769 10889 11000 11001 27018 27019
 
 # Override the default command
-CMD true
+CMD \
+  echo "ROOT = $ROOT" && \
+  echo "INSTALL_DIR = $INSTALL_DIR" && \
+  echo "KLEI = $KLEI" && \
+  echo "DNST = $DNST" && \
+  echo "CLUSTER_NAME = $CLUSTER_NAME" && \
+  echo "CLUSTER = $CLUSTER"

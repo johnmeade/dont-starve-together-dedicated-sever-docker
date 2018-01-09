@@ -89,10 +89,16 @@ start fresh, try this:
 ``` bash
 docker-compose down
 docker-compose rm -f
-docker system prune -f
+
+# find all dst images using:
+docker images
+# remove them with:
+#   docker rmi -f [<image ID>]
+# eg:
+docker rmi -f a6sj6v69 sf8sdf7s9 sd87dfg5d
 
 # WARNING: NEXT LINE DELETES ALL DATA
-docker volume rm -f folderNameOfThisRepo_dst
+docker volume rm -f thisFolderName_dst
 
 docker-compose build
 docker-compose up
@@ -107,7 +113,15 @@ and mods by rebuilding the images:
 ```bash
 docker-compose down
 docker-compose rm -f
-docker system prune -f
+
+# find all dst images using:
+docker images
+# remove them with:
+#   docker rmi -f [<image ID>]
+# eg:
+docker rmi -f a6s6v69 sf8sdf7s9 sd87dfg5d
+
+# rebuild
 docker-compose build
 docker-compose up
 ```

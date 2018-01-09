@@ -11,7 +11,7 @@ services:
     depends_on:
       - dstbase
     volumes:
-      - dst:/root/.klei/DoNotStarveTogether
+      - dst:/root/
     ports:
       - "8768:8768"
       - "10889:10889"
@@ -24,7 +24,7 @@ services:
     depends_on:
       - dstbase
     volumes:
-      - dst:/root/.klei/DoNotStarveTogether
+      - dst:/root/
     ports:
       - "8769:8769"
       - "11001:11001"

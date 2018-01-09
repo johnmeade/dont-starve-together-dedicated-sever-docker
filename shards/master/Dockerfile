@@ -8,6 +8,7 @@ ADD worldgenoverride.lua $CLUSTER/$SHARD_NAME/worldgenoverride.lua
 EXPOSE 8768 10889 11000 27018
 
 CMD \
+  echo "SHARD_NAME = $SHARD_NAME" && \
   cd $INSTALL_DIR/bin && \
   ./dontstarve_dedicated_server_nullrenderer \
     -persistent_storage_root $KLEI \
