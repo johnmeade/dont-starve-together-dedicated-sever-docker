@@ -11,7 +11,7 @@ services:
     depends_on:
       - dstbase
     volumes:
-      - dst:/root/
+      - dst_klei:/root/DST/.klei
     ports:
       - "8768:8768"
       - "10889:10889"
@@ -24,7 +24,7 @@ services:
     depends_on:
       - dstbase
     volumes:
-      - dst:/root/
+      - dst_klei:/root/DST/.klei
     ports:
       - "8769:8769"
       - "11001:11001"
@@ -32,4 +32,4 @@ services:
 
 # global volume definition for persistent storage
 volumes:
-  dst:
+  dst_klei:

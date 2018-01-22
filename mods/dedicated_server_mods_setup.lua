@@ -12,3 +12,5 @@ ServerModSetup("714735102")  -- Waypoint
 ServerModSetup("385006082")  -- Path Lights
 ServerModSetup("780009141")  -- Finder (Storage Highlighting)
 ServerModSetup("352499675")  -- Resurrection Shelter
+ServerModSetup("354533909")  -- Koalefants' Family
+ServerModSetup("436654027")  -- Beefalo Milk
